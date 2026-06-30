@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Bromelle — homemade cookies, tea cakes and muffins, freshly baked in small batches."
+  />
+  <title>Bromelle | Homemade Healthy Bakes</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Bromelle home">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>Bromelle</strong>
+          <small>Baked with love, shared with joy</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#products">Menu</a>
+        <a href="#about">Our Story</a>
+        <a href="#how-it-works">How to Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="cart-button" id="openCart" type="button" aria-label="Open cart">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Freshly baked in small batches</p>
+          <h1>Wholesome bakes that feel like home.</h1>
+          <p class="hero-text">
+            Handmade cookies, tea cakes and muffins using thoughtfully selected
+            ingredients. Freshly prepared for every order.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">View the menu</a>
+            <a class="btn btn-secondary" href="#how-it-works">How ordering works</a>
+          </div>
+
+          <div class="hero-points">
+            <span>✓ Fresh on order</span>
+            <span>✓ Homemade</span>
+            <span>✓ Delhi NCR delivery</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="assets/hero-bakes.svg"
+            alt="Illustration of homemade bakery products"
+          />
+          <div class="floating-note">
+            <strong>Today’s favourite</strong>
+            <span>Peanut Butter Cookies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Bromelle highlights">
+      <div class="container trust-grid">
+        <div><strong>100%</strong><span>Homemade</span></div>
+        <div><strong>Fresh</strong><span>Baked per order</span></div>
+        <div><strong>Simple</strong><span>Ingredients</span></div>
+        <div><strong>Easy</strong><span>WhatsApp ordering</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Our menu</p>
+            <h2>Pick your favourites</h2>
+          </div>
+          <p>
+            Select Jaggery Powder or Dates Powder for each item. Muffins also
+            include a Pack of 4 or Pack of 6 option.
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <!-- Peanut Butter Cookies -->
+          <article
+            class="product-card"
+            data-id="peanut-butter-cookies"
+            data-name="Peanut Butter Cookies"
+            data-size="200 g"
+            data-jaggery-price="200"
+            data-dates-price="225"
+          >
+            <div class="product-image">
+              <img
+                src="assets/peanut-butter-cookies.webp"
+                alt="Bromelle peanut butter cookies in a glass jar"
+                loading="lazy"
+              />
+              <span class="badge">Bestseller</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Peanut Butter Cookies</h3>
+              <p>
+                Freshly baked eggless oat and peanut butter cookies made with
+                thoughtfully selected ingredients. A guilt-free treat for adults
+                and kids.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Peanut Butter Cookies sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span>200 g</span>
+                <strong class="product-price">₹200</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Chocochip Cookies -->
+          <article
+            class="product-card"
+            data-id="chocochip-cookies"
+            data-name="Chocochip Cookies"
+            data-size="200 g"
+            data-jaggery-price="250"
+            data-dates-price="275"
+          >
+            <div class="product-image">
+              <img
+                src="assets/chocochip-cookies.webp"
+                alt="Bromelle chocochip cookies in a glass jar"
+                loading="lazy"
+              />
+              <span class="badge">Chocolate lover</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Chocochip Cookies</h3>
+              <p>
+                Freshly baked eggless chocochip cookies made with thoughtfully
+                selected, guilt-free ingredients. A perfect treat for chocolate lovers.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Chocochip Cookies sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span>200 g</span>
+                <strong class="product-price">₹250</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Suji Nut Tea Cake -->
+          <article
+            class="product-card"
+            data-id="suji-nut-tea-cake"
+            data-name="Suji Nut Tea Cake"
+            data-size="250 g"
+            data-jaggery-price="180"
+            data-dates-price="200"
+          >
+            <div class="product-image">
+              <img
+                src="assets/suji-nut-tea-cake.webp"
+                alt="Bromelle suji nut tea cake topped with seeds"
+                loading="lazy"
+              />
+              <span class="badge">Tea-time favourite</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Suji Nut Tea Cake</h3>
+              <p>
+                Freshly baked semolina tea cake topped with nuts and seeds,
+                offering a soft and wholesome sweet snack for tea time.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Suji Nut Tea Cake sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span>250 g</span>
+                <strong class="product-price">₹180</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Suji Fresh Fruit Cake -->
+          <article
+            class="product-card"
+            data-id="suji-fresh-fruit-cake"
+            data-name="Suji Fresh Fruit Cake"
+            data-size="250 g"
+            data-jaggery-price="250"
+            data-dates-price="275"
+          >
+            <div class="product-image">
+              <img
+                src="assets/suji-fresh-fruit-cake.webp"
+                alt="Bromelle suji fresh fruit cake"
+                loading="lazy"
+              />
+              <span class="badge">Fresh fruit</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Suji Fresh Fruit Cake</h3>
+              <p>
+                Soft, fruity and freshly baked with real fruits, this suji tea
+                cake makes a light and comforting tea-time treat.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Suji Fresh Fruit Cake sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span>250 g</span>
+                <strong class="product-price">₹250</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Suji Mango Cake -->
+          <article
+            class="product-card"
+            data-id="suji-mango-cake"
+            data-name="Suji Mango Cake"
+            data-size="250 g"
+            data-jaggery-price="200"
+            data-dates-price="225"
+          >
+            <div class="product-image">
+              <img
+                src="assets/suji-mango-cake.webp"
+                alt="Bromelle suji mango tea cake"
+                loading="lazy"
+              />
+              <span class="badge">Season special</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Suji Mango Cake</h3>
+              <p>
+                A seasonal suji tea cake with a soft texture and rich mango
+                flavour, made especially for mango lovers.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Suji Mango Cake sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span>250 g</span>
+                <strong class="product-price">₹200</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Chocochip Muffin -->
+          <article
+            class="product-card has-size-options"
+            data-id="chocochip-muffin"
+            data-name="Chocochip Muffin"
+            data-jaggery-price-4="200"
+            data-jaggery-price-6="300"
+            data-dates-price-4="280"
+            data-dates-price-6="420"
+          >
+            <div class="product-image">
+              <img
+                src="assets/chocochip-muffin.webp"
+                alt="Bromelle chocochip muffins"
+                loading="lazy"
+              />
+              <span class="badge">Wholewheat</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Chocochip Muffin</h3>
+              <p>
+                Freshly baked wholewheat chocochip muffins that are soft,
+                comforting and filled with delicious chocolate chips.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Chocochip Muffin sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="option-group">
+                <span class="option-label">Choose pack size</span>
+                <div class="size-toggle" role="group" aria-label="Chocochip Muffin pack size">
+                  <button class="option-button active" type="button" data-size="4" aria-pressed="true">Pack of 4</button>
+                  <button class="option-button" type="button" data-size="6" aria-pressed="false">Pack of 6</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span class="selected-size-label">Pack of 4</span>
+                <strong class="product-price">₹200</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <!-- Blueberry Muffin -->
+          <article
+            class="product-card has-size-options"
+            data-id="blueberry-muffin"
+            data-name="Blueberry Muffin"
+            data-jaggery-price-4="240"
+            data-jaggery-price-6="360"
+            data-dates-price-4="320"
+            data-dates-price-6="480"
+          >
+            <div class="product-image">
+              <img
+                src="assets/blueberry-muffin.webp"
+                alt="Bromelle blueberry muffins"
+                loading="lazy"
+              />
+              <span class="badge">Fruity goodness</span>
+            </div>
+
+            <div class="product-content">
+              <h3>Blueberry Muffin</h3>
+              <p>
+                Soft, fluffy and bursting with blueberries, these freshly baked
+                wholewheat muffins offer fruity goodness in every bite.
+              </p>
+
+              <div class="option-group">
+                <span class="option-label">Choose sweetener</span>
+                <div class="variant-toggle" role="group" aria-label="Blueberry Muffin sweetener">
+                  <button class="option-button active" type="button" data-variant="jaggery" aria-pressed="true">Jaggery</button>
+                  <button class="option-button" type="button" data-variant="dates" aria-pressed="false">Dates</button>
+                </div>
+              </div>
+
+              <div class="option-group">
+                <span class="option-label">Choose pack size</span>
+                <div class="size-toggle" role="group" aria-label="Blueberry Muffin pack size">
+                  <button class="option-button active" type="button" data-size="4" aria-pressed="true">Pack of 4</button>
+                  <button class="option-button" type="button" data-size="6" aria-pressed="false">Pack of 6</button>
+                </div>
+              </div>
+
+              <div class="product-meta">
+                <span class="selected-size-label">Pack of 4</span>
+                <strong class="product-price">₹240</strong>
+              </div>
+
+              <button class="btn btn-primary add-to-cart" type="button">Add to cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-bg" id="about">
+      <div class="container story-grid">
+        <div class="story-image">
+          <img
+            src="assets/mom-baker.svg"
+            alt="Illustration of a home baker preparing fresh bakes"
+          />
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow">Our story</p>
+          <h2>Made by a mom baker, for moments worth sharing.</h2>
+          <p>
+            Bromelle began with a simple idea: create homemade bakes that are
+            comforting, thoughtfully made and easy to share with family.
+          </p>
+          <p>
+            Every order is prepared in small batches, packed with care and baked
+            fresh instead of being mass-produced.
+          </p>
+
+          <div class="story-tags">
+            <span>Small-batch baking</span>
+            <span>Custom orders</span>
+            <span>Fresh ingredients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <p class="eyebrow">Simple ordering</p>
+            <h2>From our oven to your doorstep</h2>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+          <article>
+            <span>1</span>
+            <h3>Choose your bakes</h3>
+            <p>Select your sweetener, pack size and quantity.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Share order details</h3>
+            <p>Enter your name, address and preferred delivery date.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Confirm on WhatsApp</h3>
+            <p>Your cart becomes a ready-to-send WhatsApp message.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Pay and relax</h3>
+            <p>Payment and delivery charges are confirmed personally.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order-banner">
+      <div class="container banner-grid">
+        <div>
+          <p class="eyebrow">Planning something special?</p>
+          <h2>Custom boxes and bulk orders are welcome.</h2>
+          <p>Perfect for birthdays, office gifting, return gifts and family celebrations.</p>
+        </div>
+        <a class="btn btn-light" id="customOrderButton" href="#">Discuss a custom order</a>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact us</p>
+          <h2>Questions before ordering?</h2>
+          <p>
+            Reach out for ingredient details, customisation and delivery
+            availability.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <a id="whatsAppContact" href="#">WhatsApp us</a>
+          <a href="mailto:hello@bromelle.in">hello@bromelle.in</a>
+          <span>Faridabad &amp; Delhi NCR</span>
+          <small>Delivery availability and charges are confirmed for every order.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">Your selection</p>
+        <h2>Your cart</h2>
+      </div>
+      <button id="closeCart" class="icon-button" type="button" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <div>
+        <span>Subtotal</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <small>Delivery charges will be confirmed separately.</small>
+    </div>
+
+    <form id="checkoutForm" class="checkout-form">
+      <h3>Order details</h3>
+
+      <label>
+        Name
+        <input
+          id="customerName"
+          type="text"
+          required
+          autocomplete="name"
+          placeholder="Your full name"
+        />
+      </label>
+
+      <label>
+        Phone
+        <input
+          id="customerPhone"
+          type="tel"
+          required
+          inputmode="tel"
+          autocomplete="tel"
+          placeholder="10-digit mobile number"
+        />
+      </label>
+
+      <label>
+        Delivery address
+        <textarea
+          id="customerAddress"
+          required
+          autocomplete="street-address"
+          placeholder="House number, area, city and PIN"
+        ></textarea>
+      </label>
+
+      <label>
+        Preferred delivery date
+        <input id="deliveryDate" type="date" required />
+      </label>
+
+      <label>
+        Notes
+        <textarea
+          id="orderNotes"
+          placeholder="Allergies, gifting note, preferred timing, etc."
+        ></textarea>
+      </label>
+
+      <button class="btn btn-primary full-width" type="submit">
+        Place order on WhatsApp
+      </button>
+
+      <p class="form-note">
+        Payment details and final delivery charges are shared after order
+        availability is confirmed.
+      </p>
+    </form>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark">B</span>
+          <span>
+            <strong>Bromelle</strong>
+            <small>Baked with love, shared with joy</small>
+          </span>
+        </a>
+        <p>Homemade bakes, fresh from our kitchen.</p>
+      </div>
+
+      <div>
+        <strong>Quick links</strong>
+        <a href="#products">Menu</a>
+        <a href="#about">Our Story</a>
+        <a href="#how-it-works">How to Order</a>
+      </div>
+
+      <div>
+        <strong>Customer information</strong>
+        <span>Allergen information available on request</span>
+        <span>Made to order in Faridabad</span>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Bromelle. All rights reserved.</span>
+      <span>Freshly baked with care</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
