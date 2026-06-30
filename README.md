@@ -44,3 +44,14 @@ Suji Tuti Fruti Cake is intentionally excluded for now.
 
 - Add a verified FSSAI number when ready.
 - Add a payment gateway later. The current checkout is WhatsApp-only.
+
+
+## Latest updates
+
+- Added the Bromelle brand logo to header and footer.
+- Added ₹90 standard shipping across India.
+- Removed Delhi NCR delivery wording.
+- Replaced Today’s Favourite with Season Special: Suji Mango Cake.
+- Changed Fresh on order to Made on order.
+- Removed hello@bromelle.in.
+- Cart and WhatsApp message now include ₹90 shipping and the final total.

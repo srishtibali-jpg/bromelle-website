@@ -102,6 +102,21 @@ button {
   font-size: 0.72rem;
 }
 
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 20px rgba(94, 59, 46, 0.16);
+}
+
+.footer-brand .brand-logo {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
 .brand-mark {
   width: 42px;
   height: 42px;
@@ -283,6 +298,18 @@ h3 {
   padding: 34px;
   background: linear-gradient(145deg, #f3d7bf, #f8e8d8);
   box-shadow: var(--shadow);
+}
+
+.hero-product-card {
+  padding: 0;
+  overflow: hidden;
+  background: #f5e4d2;
+}
+
+.hero-product-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .floating-note {
@@ -742,8 +769,19 @@ h3 {
 
 .cart-summary small {
   display: block;
-  margin-top: 6px;
+  margin-top: 10px;
   color: var(--muted);
+}
+
+.cart-summary > div + div {
+  margin-top: 8px;
+}
+
+.cart-summary .grand-total {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
 }
 
 .checkout-form {
@@ -900,6 +938,12 @@ footer {
 
   .site-header .brand small {
     display: none;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
   }
 
   .nav-wrap {

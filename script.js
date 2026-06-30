@@ -1,5 +1,6 @@
 // Bromelle WhatsApp order number, including India country code.
 const WHATSAPP_NUMBER = "919999083290";
+const SHIPPING_FEE = 90;
 
 // A new storage key prevents old sample products from appearing in the cart.
 const CART_STORAGE_KEY = "bromelle-cart-v2";
@@ -9,6 +10,7 @@ const cartDrawer = document.getElementById("cartDrawer");
 const overlay = document.getElementById("overlay");
 const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
+const cartSubtotal = document.getElementById("cartSubtotal");
 const cartTotal = document.getElementById("cartTotal");
 const openCartButton = document.getElementById("openCart");
 const closeCartButton = document.getElementById("closeCart");
@@ -216,7 +218,8 @@ function renderCart() {
   );
 
   cartCount.textContent = count;
-  cartTotal.textContent = formatCurrency(total);
+  cartSubtotal.textContent = formatCurrency(total);
+  cartTotal.textContent = formatCurrency(total + SHIPPING_FEE);
 }
 
 document.querySelectorAll(".option-button").forEach(button => {
@@ -299,10 +302,11 @@ checkoutForm.addEventListener("submit", event => {
     )
     .join("\n");
 
-  const total = cart.reduce(
+  const subtotal = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+  const total = subtotal + SHIPPING_FEE;
 
   const message = [
     "Hi Bromelle! I would like to place an order.",
@@ -315,8 +319,9 @@ checkoutForm.addEventListener("submit", event => {
     "Order:",
     orderLines,
     "",
-    `Subtotal: ${formatCurrency(total)}`,
-    "Delivery charges: To be confirmed",
+    `Subtotal: ${formatCurrency(subtotal)}`,
+    `Shipping: ${formatCurrency(SHIPPING_FEE)}`,
+    `Total: ${formatCurrency(total)}`,
     `Notes: ${notes}`
   ].join("\n");
 
