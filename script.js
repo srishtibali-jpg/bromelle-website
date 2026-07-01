@@ -289,7 +289,6 @@ checkoutForm.addEventListener("submit", event => {
   const name = document.getElementById("customerName").value.trim();
   const phone = document.getElementById("customerPhone").value.trim();
   const address = document.getElementById("customerAddress").value.trim();
-  const date = document.getElementById("deliveryDate").value;
   const notes =
     document.getElementById("orderNotes").value.trim() || "None";
 
@@ -313,7 +312,6 @@ checkoutForm.addEventListener("submit", event => {
     "",
     `Name: ${name}`,
     `Phone: ${phone}`,
-    `Preferred delivery date: ${date}`,
     `Delivery address: ${address}`,
     "",
     "Order:",
@@ -357,12 +355,6 @@ document
     openCustomOrder();
   });
 
-const today = new Date();
-const minDate = new Date(today);
-minDate.setDate(today.getDate() + 1);
-
-document.getElementById("deliveryDate").min =
-  minDate.toISOString().split("T")[0];
 
 document.getElementById("year").textContent =
   new Date().getFullYear();

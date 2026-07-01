@@ -55,3 +55,13 @@ Suji Tuti Fruti Cake is intentionally excluded for now.
 - Changed Fresh on order to Made on order.
 - Removed hello@bromelle.in.
 - Cart and WhatsApp message now include ₹90 shipping and the final total.
+
+
+## Suji Tuti Fruti update
+
+- Added Suji Tuti Fruti Cake, 250 g.
+- Jaggery Powder price: ₹200.
+- Dates Powder price: ₹225.
+- Added its optimized product image.
+- Removed Preferred delivery date from checkout.
+- Removed delivery date from the WhatsApp order message.
